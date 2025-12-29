@@ -16,6 +16,22 @@
         DEV: Test Celebration (3s)
     </button>
     -->
+
+    <!-- Music Toggle Button -->
+    <button id="music-toggle" class="fixed top-4 left-4 z-50 bg-cyan-900/50 hover:bg-cyan-800/80 text-cyan-100 p-2 rounded-full backdrop-blur-sm transition-all border border-cyan-500/30 shadow-lg group">
+        <span class="sr-only">Toggle Music</span>
+        <!-- Muted Icon (Show by default) -->
+        <svg id="music-icon-off" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="1" y1="1" x2="23" y2="23"></line><path d="M9 9v6a3 3 0 0 0 5.12 2.12M15 9.34V4m-9 9a3 3 0 1 1-6 0v-5.5"></path></svg>
+        <!-- Playing Icon (Hidden by default) -->
+        <svg id="music-icon-on" class="hidden" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
+    </button>
+
+    <!-- Audio Element (Hidden) -->
+    <audio id="bg-music" loop>
+        <!-- Using a free ambient track. Replace 'src' with your own file if desired. -->
+        <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_c8b7468305.mp3" type="audio/mpeg">
+    </audio>
+
     <!-- Canvas for background effects -->
     <canvas id="bgCanvas" class="absolute top-0 left-0 w-full h-full z-0"></canvas>
 
@@ -88,3 +104,4 @@
 </body>
 
 </html>
+
