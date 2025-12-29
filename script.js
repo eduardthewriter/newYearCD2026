@@ -1,4 +1,23 @@
- // --- COUNTDOWN LOGIC ---
+// --- MUSIC LOGIC ---
+        const musicBtn = document.getElementById('music-toggle');
+        const musicIconOn = document.getElementById('music-icon-on');
+        const musicIconOff = document.getElementById('music-icon-off');
+        const bgMusic = document.getElementById('bg-music');
+        let isMusicPlaying = false;
+
+        musicBtn.addEventListener('click', () => {
+            if (isMusicPlaying) {
+                bgMusic.pause();
+                musicIconOn.classList.add('hidden');
+                musicIconOff.classList.remove('hidden');
+            } else {
+                bgMusic.play().catch(err => console.error("Audio play failed", err));
+                musicIconOn.classList.remove('hidden');
+                musicIconOff.classList.add('hidden');
+            }
+            isMusicPlaying = !isMusicPlaying;
+        });
+// --- COUNTDOWN LOGIC ---
         const nextYear = new Date().getFullYear() + 1;
         let targetDate = new Date(`January 1, 2026 00:00:00`).getTime();
         
@@ -146,3 +165,4 @@
         }
 
         animate();
+
