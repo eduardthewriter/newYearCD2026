@@ -40,4 +40,23 @@
         .group:hover .glass {
             border-color: rgba(0, 242, 255, 0.4);
             box-shadow: 0 0 20px rgba(0, 242, 255, 0.1);
+
         }
+/* --- NEW CODE START --- */
+/* Mascot Entrance Animation */
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-120%) rotate(-10deg); /* Start off-screen left and tilted */
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0) rotate(0deg); /* End at normal position */
+        opacity: 1;
+    }
+}
+
+.animate-slide-in-left {
+    /* Runs the animation once for 1.2 seconds */
+    animation: slideInLeft 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+/* --- NEW CODE END --- */
