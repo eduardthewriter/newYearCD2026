@@ -165,4 +165,7 @@
         }
 
         animate();
+// --- NEW CODE START ---
+const mascotEl = document.getElementById('mascot-owl'); // Get reference to the mascot
+// --- NEW CODE END ---
 
